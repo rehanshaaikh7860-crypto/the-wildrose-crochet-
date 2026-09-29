@@ -1,347 +1,89 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Wildrose Crochet | Handcrafted with Love</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <title>Handmade Crochet Products Collection</title>
     <style>
-        :root {
-            --bg-color: #F4F7FA;
-            --primary-blue: #1D3557;
-            --soft-blue: #457B9D;
-            --light-blue: #A8DADC;
-            --text-color: #2B2D42;
-            --card-bg: #FFFFFF;
-        }
-
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
         }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            background-color: #fcf8f6;
+            color: #333;
+            padding: 20px;
         }
-
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Header Navigation */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(29, 53, 87, 0.08);
-            border-bottom: 2px solid var(--light-blue);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-        }
-
-        .brand-title {
-            font-size: 1.4rem;
-            color: var(--primary-blue);
-            font-weight: 700;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-        }
-
-        /* Hero Section */
-        .hero {
+        h1 {
             text-align: center;
-            padding: 3rem 2rem 2rem;
-            background: linear-gradient(180deg, #EBF2F7 0%, var(--bg-color) 100%);
+            margin-bottom: 25px;
+            color: #d86979;
         }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 0.3rem;
-        }
-
-        .hero p.tagline {
-            font-style: italic;
-            font-size: 1.1rem;
-            color: var(--soft-blue);
-            margin-bottom: 1rem;
-        }
-
-        /* Story Sections */
-        .story-container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .story-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(168, 218, 220, 0.5);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(29, 53, 87, 0.04);
-        }
-
-        .story-card h2 {
-            color: var(--primary-blue);
-            font-size: 1.8rem;
-            margin-bottom: 0.2rem;
-        }
-
-        .story-card h3.subtitle {
-            color: var(--soft-blue);
-            font-weight: 400;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .promise-list {
-            list-style: none;
-            margin: 1rem 0;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .promise-list li {
-            font-weight: 600;
-            color: var(--primary-blue);
-            font-size: 1rem;
-        }
-
-        .promise-list li::before {
-            content: "✦ ";
-            color: var(--soft-blue);
-        }
-
-        /* Products Grid */
-        .products-section {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary-blue);
-            margin-bottom: 2rem;
-        }
-
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
         .product-card {
-            background: var(--card-bg);
+            background: #fff;
             border-radius: 12px;
-            border: 1px solid rgba(168, 218, 220, 0.4);
-            padding: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+            padding: 15px;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.2s ease;
         }
-
         .product-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(29, 53, 87, 0.12);
         }
-
-        .product-img {
+        .product-card img {
             width: 100%;
-            height: 190px;
+            height: 200px;
             object-fit: cover;
             border-radius: 8px;
-            margin-bottom: 1rem;
-            background-color: #EBF2F7;
+            margin-bottom: 10px;
         }
-
-        .product-name {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .btn-order {
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 0.6rem 1rem;
-            border-radius: 25px;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: background 0.3s;
-            width: 100%;
-        }
-
-        .btn-order:hover {
-            background-color: #1EBE57;
-        }
-
-        footer {
-            background-color: var(--primary-blue);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 2rem; }
-            .promise-list { flex-direction: column; gap: 0.5rem; }
+        .product-card h3 {
+            font-size: 1rem;
+            color: #4a4a4a;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header>
-        <nav>
-            <div class="logo-container">
-                <span class="brand-title">The Wildrose Crochet</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#promise">Our Promise</a></li>
-                <li><a href="#products">Shop Products</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>🧶 Handmade Crochet Products (25 Items)</h1>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>The Wildrose Crochet</h1>
-        <p class="tagline">Woven with love • Handmade artistry</p>
-    </section>
-
-    <!-- Story / About Us Sections -->
-    <div class="story-container">
-        <section class="story-card" id="about">
-            <h2>The Heart of the Brand</h2>
-            <h3 class="subtitle">Hands Behind the Hook</h3>
-            <p>Meet <strong>Nasrin Khan</strong>. She is the soul of The Wildrose Crochet[span_1](start_span)[span_1](end_span). Every stitch you see is handcrafted by her with the kind of patience and love only a mother can provide[span_2](start_span)[span_2](end_span).</p>
-        </section>
-
-        <section class="story-card">
-            <h2>Team Behind the Vision</h2>
-            <h3 class="subtitle">The Support System</h3>
-            <p>Nasrin creates the magic; her children handle the rest[span_3](start_span)[span_3](end_span). From curation and aesthetic packaging to ensuring your hampers arrive perfectly—we are a family-run labor of love[span_4](start_span)[span_4](end_span).</p>
-        </section>
-
-        <section class="story-card" id="promise">
-            <h2>Our Promise</h2>
-            <ul class="promise-list">
-                <li>Handmade</li>
-                <li>Heartfelt</li>
-                <li>Home-grown</li>
-            </ul>
-            <p>We aren't just selling crochet art; we're sharing a piece of our family's craft with yours[span_5](start_span)[span_5](end_span). Thank you for being part of our story[span_6](start_span)[span_6](end_span)!</p>
-        </section>
+    <div class="product-grid">
+        <div class="product-card"><img src="IMAGE_URL_1" alt="Scooty Charm"><h3>1. Scooty Charm</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_2" alt="Flower Keychain"><h3>2. Flower Keychain</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_3" alt="Crochet Fruits"><h3>3. Crochet Fruits</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_4" alt="Crochet Flower Bracelet"><h3>4. Crochet Flower Bracelet</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_5" alt="Hair Tie"><h3>5. Hair Tie</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_6" alt="Crochet Mobile Cover"><h3>6. Crochet Mobile Cover</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_7" alt="Crochet Namaz Keychain"><h3>7. Crochet Namaz Keychain</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_8" alt="Crochet Trinket Tray"><h3>8. Crochet Trinket Tray</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_9" alt="Crochet Paranda"><h3>9. Crochet Paranda</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_10" alt="Mini Hijab Pins"><h3>10. Mini Hijab Pins</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_11" alt="Mini Hijab Pins Bouquet"><h3>11. Mini Hijab Pins Bouquet</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_12" alt="Crochet Gajra"><h3>12. Crochet Gajra</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_13" alt="Moon and Star Keychain"><h3>13. Moon and Star Keychain</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_14" alt="Lip Balm Holder"><h3>14. Lip Balm Holder</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_15" alt="Crochet Rakhi"><h3>15. Crochet Rakhi</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_16" alt="Evil Eye Stem"><h3>16. Evil Eye Stem</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_17" alt="Daisy Flower Keychain"><h3>17. Daisy Flower Keychain</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_18" alt="Strawberry & Watermelon Keychains"><h3>18. Strawberry & Watermelon Keychains</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_19" alt="Tulip Flower Bracelet"><h3>19. Tulip Flower Bracelet</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_20" alt="Red Bow Hair Clip"><h3>20. Red Bow Hair Clip</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_21" alt="Bow Pattern Phone Cover"><h3>21. Bow Pattern Phone Cover</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_22" alt="Janamaz Miniature Keychain"><h3>22. Janamaz Miniature Keychain</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_23" alt="Flower Storage Tray"><h3>23. Flower Storage Tray</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_24" alt="Floral Hair Paranda"><h3>24. Floral Hair Paranda</h3></div>
+        <div class="product-card"><img src="IMAGE_URL_25" alt="Heart & Floral Hijab Pins Set"><h3>25. Heart & Floral Hijab Pins Set</h3></div>
     </div>
 
-    <!-- Products Section -->
-    <section class="products-section" id="products">
-        <h2 class="section-title">Our Handcrafted Collection</h2>
-        <div class="product-grid" id="productGrid"></div>
-    </section>
-
-    <footer>
-        <p>&copy; The Wildrose Crochet - Handcrafted by Nasrin Khan</p>
-        <p>Made with ❤️ for Crochet Art Lovers</p>
-    </footer>
-
-    <script>
-        const whatsappNumber = "910000000000"; // Apna WhatsApp Number yahan daalo
-
-        // Products with High-Quality Crochet Image URLs
-        const products = [
-            { name: "Crochet Scrunchie", img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=500&auto=format&fit=crop" },
-            { name: "Swiss Roll Keychain", img: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop" },
-            { name: "Animal Claws Keychain", img: "https://images.unsplash.com/photo-1615397349754-cfa2066a298e?w=500&auto=format&fit=crop" },
-            { name: "Butterfly Bow", img: "https://images.unsplash.com/photo-1590593162201-f67611a18b87?w=500&auto=format&fit=crop" },
-            { name: "Crochet Bookmark", img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop" },
-            { name: "Crochet Rose Flower Stem", img: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500&auto=format&fit=crop" },
-            { name: "Cable Holder", img: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&auto=format&fit=crop" },
-            { name: "Crochet Jersey Keychain", img: "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?w=500&auto=format&fit=crop" },
-            { name: "Sunflower Clips", img: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=500&auto=format&fit=crop" },
-            { name: "Crochet Crown", img: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=500&auto=format&fit=crop" },
-            { name: "Scooty Charm", img: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=500&auto=format&fit=crop" },
-            { name: "Flower Keychain", img: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=500&auto=format&fit=crop" },
-            { name: "Crochet Fruits", img: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=500&auto=format&fit=crop" },
-            { name: "Crochet Flower Bracelet", img: "https://images.unsplash.com/photo-1611591475168-356a5c37eb64?w=500&auto=format&fit=crop" },
-            { name: "Hair Tie", img: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&auto=format&fit=crop" },
-            { name: "Crochet Mobile Cover", img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500&auto=format&fit=crop" },
-            { name: "Crochet Namaz Keychain", img: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=500&auto=format&fit=crop" },
-            { name: "Crochet Trinket Tray", img: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&auto=format&fit=crop" },
-            { name: "Crochet Paranda", img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&auto=format&fit=crop" },
-            { name: "Mini Hijabs Pins", img: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=500&auto=format&fit=crop" },
-            { name: "Mini Hijabs Pins Bouquet", img: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500&auto=format&fit=crop" },
-            { name: "Crochet Gajra", img: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=500&auto=format&fit=crop" },
-            { name: "Moon and Star Keychain", img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop" },
-            { name: "Lip Balm Holder", img: "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?w=500&auto=format&fit=crop" },
-            { name: "Crochet Rakhi", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&auto=format&fit=crop" }
-        ];
-
-        const productGrid = document.getElementById('productGrid');
-
-        products.forEach((product) => {
-            const card = document.createElement('div');
-            card.className = 'product-card';
-            
-            const message = encodeURIComponent(`Hello! I would like to order/inquire about: ${product.name}`);
-            const waLink = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-            card.innerHTML = `
-                <div>
-                    <img src="${product.img}" alt="${product.name}" class="product-img" loading="lazy">
-                    <div class="product-name">${product.name}</div>
-                </div>
-                <div>
-                    <a href="${waLink}" target="_blank" class="btn-order">
-                        <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
-                    </a>
-                </div>
-            `;
-            productGrid.appendChild(card);
-        });
-    </script>
 </body>
 </html>
