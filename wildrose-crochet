@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wildrose Crochet | Handcrafted with Love</title>
+    <!-- Google Fonts for Elegant Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #F4F7FA;
+            --primary-blue: #1D3557;
+            --soft-blue: #457B9D;
+            --light-blue: #A8DADC;
+            --accent-cream: #F8F1E5;
+            --text-color: #2B2D42;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .serif-text {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Header & Nav */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(29, 53, 87, 0.08);
+            border-bottom: 2px solid var(--light-blue);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--primary-blue);
+        }
+
+        .brand-title {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--soft-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem 3rem;
+            background: linear-gradient(180deg, #EBF2F7 0%, var(--bg-color) 100%);
+        }
+
+        .hero img {
+            max-width: 160px;
+            border-radius: 50%;
+            border: 3px solid var(--soft-blue);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(29, 53, 87, 0.15);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p.tagline {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--soft-blue);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Brand Story Sections */
+        .story-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .story-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(168, 218, 220, 0.5);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(29, 53, 87, 0.04);
+        }
+
+        .story-card h2 {
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .story-card h3.subtitle {
+            color: var(--soft-blue);
+            font-weight: 400;
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+        }
+
+        .promise-list {
+            list-style: none;
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .promise-list li {
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+        }
+
+        .promise-list li::before {
+            content: "✦ ";
+            color: var(--soft-blue);
+        }
+
+        /* Products Grid */
+        .products-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 2rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid rgba(168, 218, 220, 0.4);
+            padding: 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(29, 53, 87, 0.12);
+        }
+
+        .product-placeholder {
+            width: 100%;
+            height: 160px;
+            background: #EBF2F7;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            color: var(--soft-blue);
+            font-size: 2.5rem;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .btn-order {
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 0.6rem 1rem;
+            border-radius: 25px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .btn-order:hover {
+            background-color: #1EBE57;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .promise-list {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="The Wildrose Crochet Logo" class="logo-img">
+                <span class="brand-title">The Wildrose Crochet</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#promise">Our Promise</a></li>
+                <li><a href="#products">Shop Products</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="logo.jpg" alt="The Wildrose Crochet Logo">
+        <h1>The Wildrose Crochet</h1>
+        <p class="tagline">Woven with love • Handmade artistry</p>
+    </section>
+
+    <!-- Story / About Us Sections -->
+    <div class="story-container">
+        
+        <!-- About Nasrin Khan -->
+        <section class="story-card" id="about">
+            <h2>The Heart of the Brand</h2>
+            <h3 class="subtitle">Hands Behind the Hook</h3>
+            <p>Meet <strong>Nasrin Khan</strong>. She is the soul of The Wildrose Crochet[span_0](start_span)[span_0](end_span). Every stitch you see is handcrafted by her with the kind of patience and love only a mother can provide[span_1](start_span)[span_1](end_span).</p>
+        </section>
+
+        <!-- Team Support System -->
+        <section class="story-card">
+            <h2>Team Behind the Vision</h2>
+            <h3 class="subtitle">The Support System</h3>
+            <p>Nasrin creates the magic; her children handle the rest[span_2](start_span)[span_2](end_span). From curation and aesthetic packaging to ensuring your hampers arrive perfectly—we are a family-run labor of love[span_3](start_span)[span_3](end_span).</p>
+        </section>
+
+        <!-- Our Promise -->
+        <section class="story-card" id="promise">
+            <h2>Our Promise</h2>
+            <ul class="promise-list">
+                <li>Handmade</li>
+                <li>Heartfelt</li>
+                <li>Home-grown</li>
+            </ul>
+            <p>We aren't just selling crochet art; we're sharing a piece of our family's craft with yours[span_4](start_span)[span_4](end_span). Thank you for being part of our story[span_5](start_span)[span_5](end_span)!</p>
+        </section>
+
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <h2 class="section-title">Our Handcrafted Collection</h2>
+        <div class="product-grid" id="productGrid">
+            <!-- Products will be generated dynamically by JS below -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; The Wildrose Crochet - Handcrafted by Nasrin Khan</p>
+        <p>Made with ❤️ for Crochet Art Lovers</p>
+    </footer>
+
+    <!-- Script for Generating Products & Handling WhatsApp Order Links -->
+    <script>
+        // Set your WhatsApp phone number here (with Country Code, e.g. 91XXXXXXXXXX)
+        const whatsappNumber = "910000000000"; // <-- YAHAN APNA WHATSAPP NUMBER DAALEIN
+
+        // List of all 25 Crochet Products
+        const products = [
+            "Crochet Scrunchie", "Swiss Roll Keychain", "Animal Claws Keychain", 
+            "Butterfly Bow", "Crochet Bookmark", "Crochet Rose Flower Stem", 
+            "Cable Holder", "Crochet Jersey Keychain", "Sunflower Clips", 
+            "Crochet Crown", "Scooty Charm", "Flower Keychain", 
+            "Crochet Fruits", "Crochet Flower Bracelet", "Hair Tie", 
+            "Crochet Mobile Cover", "Crochet Namaz Keychain", "Crochet Trinket Tray", 
+            "Crochet Paranda", "Mini Hijabs Pins", "Mini Hijabs Pins Bouquet", 
+            "Crochet Gajra", "Moon and Star Keychain", "Lip Balm Holder", "Crochet Rakhi"
+        ];
+
+        const productGrid = document.getElementById('productGrid');
+
+        products.forEach((product) => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            
+            // Text to send on WhatsApp when user clicks Order
+            const message = encodeURIComponent(`Hello! I would like to order/inquire about: ${product}`);
+            const waLink = `https://wa.me/${whatsappNumber}?text=${message}`;
+
+            card.innerHTML = `
+                <div>
+                    <div class="product-placeholder">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="product-name">${product}</div>
+                </div>
+                <div>
+                    <a href="${waLink}" target="_blank" class="btn-order">
+                        <i class="fa-brands fa-whatsapp"></i> Order on WhatsApp
+                    </a>
+                </div>
+            `;
+            productGrid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
