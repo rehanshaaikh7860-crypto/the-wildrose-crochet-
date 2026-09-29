@@ -55,12 +55,6 @@
             padding: 1rem 2rem;
         }
 
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
         .brand-title {
             font-size: 1.4rem;
             color: var(--primary-blue);
@@ -186,19 +180,13 @@
             box-shadow: 0 8px 20px rgba(29, 53, 87, 0.12);
         }
 
-        .product-box {
+        .product-img {
             width: 100%;
-            height: 180px;
-            background-color: #EBF2F7;
+            height: 190px;
+            object-fit: cover;
             border-radius: 8px;
             margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--soft-blue);
-            font-weight: 500;
-            font-size: 0.9rem;
-            border: 1px dashed var(--light-blue);
+            background-color: #EBF2F7;
         }
 
         .product-name {
@@ -269,13 +257,13 @@
         <section class="story-card" id="about">
             <h2>The Heart of the Brand</h2>
             <h3 class="subtitle">Hands Behind the Hook</h3>
-            <p>Meet <strong>Nasrin Khan</strong>. She is the soul of The Wildrose Crochet[span_0](start_span)[span_0](end_span). Every stitch you see is handcrafted by her with the kind of patience and love only a mother can provide[span_1](start_span)[span_1](end_span).</p>
+            <p>Meet <strong>Nasrin Khan</strong>. She is the soul of The Wildrose Crochet[span_1](start_span)[span_1](end_span). Every stitch you see is handcrafted by her with the kind of patience and love only a mother can provide[span_2](start_span)[span_2](end_span).</p>
         </section>
 
         <section class="story-card">
             <h2>Team Behind the Vision</h2>
             <h3 class="subtitle">The Support System</h3>
-            <p>Nasrin creates the magic; her children handle the rest[span_2](start_span)[span_2](end_span). From curation and aesthetic packaging to ensuring your hampers arrive perfectly—we are a family-run labor of love[span_3](start_span)[span_3](end_span).</p>
+            <p>Nasrin creates the magic; her children handle the rest[span_3](start_span)[span_3](end_span). From curation and aesthetic packaging to ensuring your hampers arrive perfectly—we are a family-run labor of love[span_4](start_span)[span_4](end_span).</p>
         </section>
 
         <section class="story-card" id="promise">
@@ -285,7 +273,7 @@
                 <li>Heartfelt</li>
                 <li>Home-grown</li>
             </ul>
-            <p>We aren't just selling crochet art; we're sharing a piece of our family's craft with yours[span_4](start_span)[span_4](end_span). Thank you for being part of our story[span_5](start_span)[span_5](end_span)!</p>
+            <p>We aren't just selling crochet art; we're sharing a piece of our family's craft with yours[span_5](start_span)[span_5](end_span). Thank you for being part of our story[span_6](start_span)[span_6](end_span)!</p>
         </section>
     </div>
 
@@ -301,18 +289,35 @@
     </footer>
 
     <script>
-        // AAPKA WHATSAPP NUMBER
-        const whatsappNumber = "910000000000"; // <-- Yahan apna WhatsApp number daalein (e.g., 919876543210)
+        const whatsappNumber = "910000000000"; // Apna WhatsApp Number yahan daalo
 
+        // Products with High-Quality Crochet Image URLs
         const products = [
-            "Crochet Scrunchie", "Swiss Roll Keychain", "Animal Claws Keychain", 
-            "Butterfly Bow", "Crochet Bookmark", "Crochet Rose Flower Stem", 
-            "Cable Holder", "Crochet Jersey Keychain", "Sunflower Clips", 
-            "Crochet Crown", "Scooty Charm", "Flower Keychain", 
-            "Crochet Fruits", "Crochet Flower Bracelet", "Hair Tie", 
-            "Crochet Mobile Cover", "Crochet Namaz Keychain", "Crochet Trinket Tray", 
-            "Crochet Paranda", "Mini Hijabs Pins", "Mini Hijabs Pins Bouquet", 
-            "Crochet Gajra", "Moon and Star Keychain", "Lip Balm Holder", "Crochet Rakhi"
+            { name: "Crochet Scrunchie", img: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=500&auto=format&fit=crop" },
+            { name: "Swiss Roll Keychain", img: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500&auto=format&fit=crop" },
+            { name: "Animal Claws Keychain", img: "https://images.unsplash.com/photo-1615397349754-cfa2066a298e?w=500&auto=format&fit=crop" },
+            { name: "Butterfly Bow", img: "https://images.unsplash.com/photo-1590593162201-f67611a18b87?w=500&auto=format&fit=crop" },
+            { name: "Crochet Bookmark", img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&auto=format&fit=crop" },
+            { name: "Crochet Rose Flower Stem", img: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500&auto=format&fit=crop" },
+            { name: "Cable Holder", img: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=500&auto=format&fit=crop" },
+            { name: "Crochet Jersey Keychain", img: "https://images.unsplash.com/photo-1607344645866-009c320c5ab8?w=500&auto=format&fit=crop" },
+            { name: "Sunflower Clips", img: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=500&auto=format&fit=crop" },
+            { name: "Crochet Crown", img: "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=500&auto=format&fit=crop" },
+            { name: "Scooty Charm", img: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=500&auto=format&fit=crop" },
+            { name: "Flower Keychain", img: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=500&auto=format&fit=crop" },
+            { name: "Crochet Fruits", img: "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=500&auto=format&fit=crop" },
+            { name: "Crochet Flower Bracelet", img: "https://images.unsplash.com/photo-1611591475168-356a5c37eb64?w=500&auto=format&fit=crop" },
+            { name: "Hair Tie", img: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=500&auto=format&fit=crop" },
+            { name: "Crochet Mobile Cover", img: "https://images.unsplash.com/photo-1580910051074-3eb694886505?w=500&auto=format&fit=crop" },
+            { name: "Crochet Namaz Keychain", img: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=500&auto=format&fit=crop" },
+            { name: "Crochet Trinket Tray", img: "https://images.unsplash.com/photo-1616046229478-9901c5536a45?w=500&auto=format&fit=crop" },
+            { name: "Crochet Paranda", img: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=500&auto=format&fit=crop" },
+            { name: "Mini Hijabs Pins", img: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=500&auto=format&fit=crop" },
+            { name: "Mini Hijabs Pins Bouquet", img: "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500&auto=format&fit=crop" },
+            { name: "Crochet Gajra", img: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=500&auto=format&fit=crop" },
+            { name: "Moon and Star Keychain", img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=500&auto=format&fit=crop" },
+            { name: "Lip Balm Holder", img: "https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?w=500&auto=format&fit=crop" },
+            { name: "Crochet Rakhi", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=500&auto=format&fit=crop" }
         ];
 
         const productGrid = document.getElementById('productGrid');
@@ -321,13 +326,13 @@
             const card = document.createElement('div');
             card.className = 'product-card';
             
-            const message = encodeURIComponent(`Hello! I would like to order/inquire about: ${product}`);
+            const message = encodeURIComponent(`Hello! I would like to order/inquire about: ${product.name}`);
             const waLink = `https://wa.me/${whatsappNumber}?text=${message}`;
 
             card.innerHTML = `
                 <div>
-                    <div class="product-box">✨ Handcrafted Item</div>
-                    <div class="product-name">${product}</div>
+                    <img src="${product.img}" alt="${product.name}" class="product-img" loading="lazy">
+                    <div class="product-name">${product.name}</div>
                 </div>
                 <div>
                     <a href="${waLink}" target="_blank" class="btn-order">
