@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Wildrose Crochet | Handcrafted with Love</title>
-    <!-- Google Fonts for Elegant Typography -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -32,11 +32,11 @@
             line-height: 1.6;
         }
 
-        h1, h2, h3, .serif-text {
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
 
-        /* Header & Nav */
+        /* Header Navigation */
         header {
             background: rgba(255, 255, 255, 0.95);
             position: sticky;
@@ -61,14 +61,6 @@
             gap: 15px;
         }
 
-        .logo-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--primary-blue);
-        }
-
         .brand-title {
             font-size: 1.4rem;
             color: var(--primary-blue);
@@ -85,11 +77,6 @@
             text-decoration: none;
             color: var(--text-color);
             font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--soft-blue);
         }
 
         /* Hero Section */
@@ -97,16 +84,6 @@
             text-align: center;
             padding: 3rem 2rem 2rem;
             background: linear-gradient(180deg, #EBF2F7 0%, var(--bg-color) 100%);
-        }
-
-        .hero img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--soft-blue);
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(29, 53, 87, 0.15);
         }
 
         .hero h1 {
@@ -209,13 +186,19 @@
             box-shadow: 0 8px 20px rgba(29, 53, 87, 0.12);
         }
 
-        .product-img {
+        .product-box {
             width: 100%;
             height: 180px;
-            object-fit: cover;
+            background-color: #EBF2F7;
             border-radius: 8px;
             margin-bottom: 1rem;
-            background-color: #EBF2F7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--soft-blue);
+            font-weight: 500;
+            font-size: 0.9rem;
+            border: 1px dashed var(--light-blue);
         }
 
         .product-name {
@@ -244,7 +227,6 @@
             background-color: #1EBE57;
         }
 
-        /* Footer */
         footer {
             background-color: var(--primary-blue);
             color: white;
@@ -253,22 +235,10 @@
             margin-top: 4rem;
         }
 
-        footer p {
-            margin-bottom: 0.3rem;
-        }
-
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .promise-list {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .promise-list { flex-direction: column; gap: 0.5rem; }
         }
     </style>
 </head>
@@ -278,7 +248,6 @@
     <header>
         <nav>
             <div class="logo-container">
-                <img src="logo.jpg" alt="The Wildrose Crochet Logo" class="logo-img" onerror="this.style.display='none'">
                 <span class="brand-title">The Wildrose Crochet</span>
             </div>
             <ul class="nav-links">
@@ -291,29 +260,24 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="logo.jpg" alt="The Wildrose Crochet Logo" onerror="this.src='https://via.placeholder.com/150/1D3557/FFFFFF?text=Wildrose'">
         <h1>The Wildrose Crochet</h1>
         <p class="tagline">Woven with love • Handmade artistry</p>
     </section>
 
     <!-- Story / About Us Sections -->
     <div class="story-container">
-        
-        <!-- About Nasrin Khan -->
         <section class="story-card" id="about">
             <h2>The Heart of the Brand</h2>
             <h3 class="subtitle">Hands Behind the Hook</h3>
             <p>Meet <strong>Nasrin Khan</strong>. She is the soul of The Wildrose Crochet[span_0](start_span)[span_0](end_span). Every stitch you see is handcrafted by her with the kind of patience and love only a mother can provide[span_1](start_span)[span_1](end_span).</p>
         </section>
 
-        <!-- Team Support System -->
         <section class="story-card">
             <h2>Team Behind the Vision</h2>
             <h3 class="subtitle">The Support System</h3>
             <p>Nasrin creates the magic; her children handle the rest[span_2](start_span)[span_2](end_span). From curation and aesthetic packaging to ensuring your hampers arrive perfectly—we are a family-run labor of love[span_3](start_span)[span_3](end_span).</p>
         </section>
 
-        <!-- Our Promise -->
         <section class="story-card" id="promise">
             <h2>Our Promise</h2>
             <ul class="promise-list">
@@ -323,55 +287,32 @@
             </ul>
             <p>We aren't just selling crochet art; we're sharing a piece of our family's craft with yours[span_4](start_span)[span_4](end_span). Thank you for being part of our story[span_5](start_span)[span_5](end_span)!</p>
         </section>
-
     </div>
 
     <!-- Products Section -->
     <section class="products-section" id="products">
         <h2 class="section-title">Our Handcrafted Collection</h2>
-        <div class="product-grid" id="productGrid">
-            <!-- Dynamic JavaScript Generation -->
-        </div>
+        <div class="product-grid" id="productGrid"></div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; The Wildrose Crochet - Handcrafted by Nasrin Khan</p>
         <p>Made with ❤️ for Crochet Art Lovers</p>
     </footer>
 
-    <!-- Script Section -->
     <script>
-        // AAPKA WHATSAPP NUMBER (With Country Code)
-        const whatsappNumber = "910000000000"; // <-- Yahan apna number badal lena (e.g., 919876543210)
+        // AAPKA WHATSAPP NUMBER
+        const whatsappNumber = "910000000000"; // <-- Yahan apna WhatsApp number daalein (e.g., 919876543210)
 
-        // All 25 Products Data (Image file names added)
         const products = [
-            { id: 1, name: "Crochet Scrunchie", img: "scrunchie.jpg" },
-            { id: 2, name: "Swiss Roll Keychain", img: "swiss-roll.jpg" },
-            { id: 3, name: "Animal Claws Keychain", img: "animal-claws.jpg" },
-            { id: 4, name: "Butterfly Bow", img: "butterfly-bow.jpg" },
-            { id: 5, name: "Crochet Bookmark", img: "bookmark.jpg" },
-            { id: 6, name: "Crochet Rose Flower Stem", img: "rose-stem.jpg" },
-            { id: 7, name: "Cable Holder", img: "cable-holder.jpg" },
-            { id: 8, name: "Crochet Jersey Keychain", img: "jersey-keychain.jpg" },
-            { id: 9, name: "Sunflower Clips", img: "sunflower-clips.jpg" },
-            { id: 10, name: "Crochet Crown", img: "crown.jpg" },
-            { id: 11, name: "Scooty Charm", img: "scooty-charm.jpg" },
-            { id: 12, name: "Flower Keychain", img: "flower-keychain.jpg" },
-            { id: 13, name: "Crochet Fruits", img: "fruits.jpg" },
-            { id: 14, name: "Crochet Flower Bracelet", img: "flower-bracelet.jpg" },
-            { id: 15, name: "Hair Tie", img: "hair-tie.jpg" },
-            { id: 16, name: "Crochet Mobile Cover", img: "mobile-cover.jpg" },
-            { id: 17, name: "Crochet Namaz Keychain", img: "namaz-keychain.jpg" },
-            { id: 18, name: "Crochet Trinket Tray", img: "trinket-tray.jpg" },
-            { id: 19, name: "Crochet Paranda", img: "paranda.jpg" },
-            { id: 20, name: "Mini Hijabs Pins", img: "mini-hijab-pins.jpg" },
-            { id: 21, name: "Mini Hijabs Pins Bouquet", img: "hijab-pins-bouquet.jpg" },
-            { id: 22, name: "Crochet Gajra", img: "gajra.jpg" },
-            { id: 23, name: "Moon and Star Keychain", img: "moon-star.jpg" },
-            { id: 24, name: "Lip Balm Holder", img: "lip-balm-holder.jpg" },
-            { id: 25, name: "Crochet Rakhi", img: "rakhi.jpg" }
+            "Crochet Scrunchie", "Swiss Roll Keychain", "Animal Claws Keychain", 
+            "Butterfly Bow", "Crochet Bookmark", "Crochet Rose Flower Stem", 
+            "Cable Holder", "Crochet Jersey Keychain", "Sunflower Clips", 
+            "Crochet Crown", "Scooty Charm", "Flower Keychain", 
+            "Crochet Fruits", "Crochet Flower Bracelet", "Hair Tie", 
+            "Crochet Mobile Cover", "Crochet Namaz Keychain", "Crochet Trinket Tray", 
+            "Crochet Paranda", "Mini Hijabs Pins", "Mini Hijabs Pins Bouquet", 
+            "Crochet Gajra", "Moon and Star Keychain", "Lip Balm Holder", "Crochet Rakhi"
         ];
 
         const productGrid = document.getElementById('productGrid');
@@ -380,14 +321,13 @@
             const card = document.createElement('div');
             card.className = 'product-card';
             
-            const message = encodeURIComponent(`Hello! I would like to order/inquire about: ${product.name}`);
+            const message = encodeURIComponent(`Hello! I would like to order/inquire about: ${product}`);
             const waLink = `https://wa.me/${whatsappNumber}?text=${message}`;
 
             card.innerHTML = `
                 <div>
-                    <!-- Unique Product Image with Fallback Logo Image -->
-                    <img src="${product.img}" alt="${product.name}" class="product-img" onerror="this.src='logo.jpg'">
-                    <div class="product-name">${product.name}</div>
+                    <div class="product-box">✨ Handcrafted Item</div>
+                    <div class="product-name">${product}</div>
                 </div>
                 <div>
                     <a href="${waLink}" target="_blank" class="btn-order">
@@ -400,4 +340,3 @@
     </script>
 </body>
 </html>
-
